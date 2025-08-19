@@ -4,6 +4,7 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Eye, EyeOff, Gamepad2, LogIn, Loader2 } from "lucide-react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -152,15 +153,21 @@ export function LoginForm() {
 
           {/* Footer Links */}
           <div className="space-y-4 text-center">
-            <button className="text-sm text-purple-400 hover:text-purple-300 transition-colors">
+            <Link 
+              href="/forgot-password" 
+              className="block text-sm text-purple-400 hover:text-purple-300 transition-colors"
+            >
               Esqueceu sua senha?
-            </button>
+            </Link>
             
             <div className="text-sm text-gray-400">
               Não tem uma conta?{" "}
-              <button className="text-purple-400 hover:text-purple-300 font-medium transition-colors">
+              <Link 
+                href="/register" 
+                className="text-purple-400 hover:text-purple-300 font-medium transition-colors"
+              >
                 Cadastre-se
-              </button>
+              </Link>
             </div>
           </div>
 
