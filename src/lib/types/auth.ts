@@ -50,3 +50,14 @@ export interface AuthError {
   message: string
   statusCode: number
 }
+
+export interface AccessToken {
+  id: number,
+  email: string,
+  username: string,
+  cpf: string,
+  phone?: string,
+  createdAt: Date,
+  updatedAt: Date,
+  deletedAt?: Date,
+}
